@@ -2,14 +2,121 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+}
+.top-container {
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-bottom: 3%;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
   max-width: 100%;
-  max-height: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
-.container{
-    margin: 10px;
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
 }
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
 .line-division {
   width: 60%;
-  border-top: 1px solid black;
+  border-top: 0.5px solid black;
   margin: 50px auto;
+}
+
+.bottom-container {
+  height: 65%;
+  background-image: linear-gradient(
+    290deg,
+    hsl(345deg 62% 71%) 0%,
+    hsl(345deg 64% 73%) 10%,
+    hsl(345deg 65% 74%) 19%,
+    hsl(345deg 67% 76%) 28%,
+    hsl(346deg 70% 77%) 37%,
+    hsl(346deg 72% 79%) 46%,
+    hsl(346deg 75% 80%) 55%,
+    hsl(346deg 78% 82%) 64%,
+    hsl(346deg 81% 83%) 73%,
+    hsl(346deg 86% 84%) 82%,
+    hsl(346deg 91% 86%) 91%,
+    hsl(346deg 97% 87%) 100%
+  );
+}
+
+.display-password {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 40px 40px;
+  column-gap: 40px;
+  row-gap: 30px;
+  justify-content: flex-end;
+  margin-right: 50px;
+  padding-top: 30px;
+}
+
+.input-style{
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
 }
