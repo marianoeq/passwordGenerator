@@ -29,6 +29,37 @@ button.addEventListener("click", (e) => {
   input4.value = password();
 });
 
+
+function copyPassword(id){
+  if(id === "first-Icon"){
+    navigator.clipboard
+    .writeText(input1.value)
+    .then(function () {
+      alert("You copied password 1"); // success
+    })
+  }else if (id === "sec-Icon"){
+    navigator.clipboard
+    .writeText(input2.value)
+    .then(function () {
+      alert("You copied password 2"); // success
+    })
+  }else if(id === "third-Icon"){
+    navigator.clipboard
+    .writeText(input3.value)
+    .then(function () {
+      alert("You copied password 3"); // success
+    })
+  }else{
+    navigator.clipboard
+    .writeText(input4.value)
+    .then(function () {
+      alert("You copied password 4"); // success
+    })
+  }
+}
+
+
+
 // Create 3 different variables with all charactes possibles to create a passwords object✅
 // letters/symbols/numbers✅
 //Select button with class .gen-pass✅

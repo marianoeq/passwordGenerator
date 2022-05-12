@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/fdeac670ce.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/fdeac670ce.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles.css" />
     <title>Password Generator</title>
   </head>
@@ -20,11 +23,33 @@
       <div class="line-division"></div>
       <div class="bottom-container">
         <div class="display-password">
-            
-          <input type="text" class="first-password input-style">
-          <input type="text" class="second-password input-style" />
-          <input type="text" class="third-password input-style" />
-          <input type="text" class="fourth-password input-style" />
+          <div class="input-icons">
+            <i id="first-Icon" class="fa fa-copy icon" onclick="copyPassword(id)"></i>
+
+            <input type="text" class="first-password input-style input-field" />
+          </div>
+          <div class="input-icons">
+            <i id="sec-Icon" class="fa fa-copy icon" onclick="copyPassword(id)"></i>
+            <input
+              type="text"
+              class="second-password input-style input-field"
+            />
+          </div>
+          <div class="input-icons">
+            <i id="third-Icon" class="fa fa-copy icon" onclick="copyPassword(id)"></i>
+            <input type="text" class="third-password input-style input-field" />
+          </div>
+          <div class="input-icons">
+            <i id="fourth-Icon" class="fa fa-copy icon" onclick="copyPassword(id)"></i>
+            <input
+              type="text"
+              class="fourth-password input-style input-field"
+            />
+          </div>
+        </div>
+
+        <div class="footer-line-division">
+          <p class="footer">Copyright &copy; Password Generator</p>
         </div>
       </div>
     </div>
