@@ -9,7 +9,15 @@ const input2 = document.querySelector(".second-password");
 const input3 = document.querySelector(".third-password");
 const input4 = document.querySelector(".fourth-password");
 
-const password = function () {
+const slider = document.querySelector("#input-range");
+const output = document.querySelector("#output-el");
+
+
+
+function passwordLength(){
+  output.innerHTML = `Number of characters:  ${slider.value}`;  
+  console.log(slider.value);
+
   return Array(4)
     .fill(0)
     .flatMap(() => [
@@ -17,16 +25,16 @@ const password = function () {
       numbers[Math.floor(Math.random() * numbers.length)],
       symbols[Math.floor(Math.random() * symbols.length)],
     ])
-    .join("");
+    .join("").substring(0,slider.value)
 };
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
 
-  input1.value = password();
-  input2.value = password();
-  input3.value = password();
-  input4.value = password();
+  input1.value = passwordLength();
+  input2.value = passwordLength();
+  input3.value = passwordLength();
+  input4.value = passwordLength();
 });
 
 
@@ -35,25 +43,25 @@ function copyPassword(id){
     navigator.clipboard
     .writeText(input1.value)
     .then(function () {
-      alert("You copied password 1"); // success
+      alert(`You copied this ( ${input1.value} ) password`); // success
     })
   }else if (id === "sec-Icon"){
     navigator.clipboard
     .writeText(input2.value)
     .then(function () {
-      alert("You copied password 2"); // success
+      alert(`You copied this ( ${input2.value} ) password`); // success
     })
   }else if(id === "third-Icon"){
     navigator.clipboard
     .writeText(input3.value)
     .then(function () {
-      alert("You copied password 3"); // success
+      alert(`You copied this ( ${input3.value} ) password`); // success
     })
   }else{
     navigator.clipboard
     .writeText(input4.value)
     .then(function () {
-      alert("You copied password 4"); // success
+      alert(`You copied this ( ${input4.value} ) password`); // success
     })
   }
 }
